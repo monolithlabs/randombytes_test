@@ -20,8 +20,3 @@ process.env['NODE_ENV'] = isDev ? 'development' : 'production'
 if (typeof localStorage !== 'undefined') {
   localStorage.debug = isDev ? '*' : ''
 }
-
-const crypto = require('crypto')
-if (crypto && !crypto.getRandomValues) {
-  crypto.getRandomValues = window.crypto.getRandomValues
-}

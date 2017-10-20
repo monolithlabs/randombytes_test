@@ -11,14 +11,13 @@ import {
   Text,
   View
 } from 'react-native';
-const crypto = require('crypto')
-const path = require('path')
+
+//var crypto = require('crypto')
+var randombytes = require('randombytes')
 
 export default class App extends Component<{}> {
   render() {
-    //let msg = crypto.randomBytes(4).toString('hex').slice(0, 7)
-
-    let msg = path.extname("index.html")
+    let msg = randombytes(4).toString('hex').slice(0, 7)
 
     return (
       <View style={styles.container}>
